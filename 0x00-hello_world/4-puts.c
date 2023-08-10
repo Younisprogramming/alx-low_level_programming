@@ -1,10 +1,9 @@
 #include <stdio.h>
-#include <string.h>
+
 int main(void)
 {
-char Mystr[] = "Programming is like building a multilingual puzzle";
-puts(Myster);
+	/* puts function */
+puts("\"Programming is like building a multilingual puzzle");
 
-return 0;
-
+return (0);
 }
