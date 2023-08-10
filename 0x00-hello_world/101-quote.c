@@ -10,7 +10,6 @@ int main(void)
 {
 
 	char buf1[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19";
-	char buf2[];
 
 	  int Fd = open(“sample.txt”, O_CREATE);
 	  /*Fd[1] = open(“sample.txt”, O_CREATE);*/
