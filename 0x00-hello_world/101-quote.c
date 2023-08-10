@@ -15,8 +15,8 @@ int main(void)
 	  int Fd = open("sample.txt", O_CREAT);
 	  /*Fd[1] = open(“sample.txt”, O_CREATE);*/
 
-	  Write(fd, buf1, strlen(buf1));
-	  /*Write(1, buf2, read(fd[1], buf2, 12));*/
+	  write(fd, buf1, strlen(buf1));
+	  /*Write(1, buf2, read(fd[1], buf2i, 12));*/
 
 	  Close(fd);
 }
