@@ -6,9 +6,12 @@
  */
 int main(void)
 {
-	for (int x = 0 ; x < 10 ; x++)
+	int x = 0;
+
+	while (x < 10)
 	{
 		putchar('0' + x);
+		x++;
 	}
 	putcahr('\n');
 	return (0);
