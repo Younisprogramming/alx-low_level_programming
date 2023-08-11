@@ -30,10 +30,12 @@ int main(void)
 					putchar(',');
 					putchar(' ');
 				}
-			c++;
+				c++;
 			}
-		b++;
+			b++;
 		}
-	a++;
+		a++;
 	}
-
+	putchar('\n');
+	return (0);
+}
