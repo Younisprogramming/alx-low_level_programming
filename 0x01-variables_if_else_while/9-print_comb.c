@@ -10,7 +10,7 @@ int main(void)
 
 	while (x < 9)
 	{
-		putchar('o' + x);
+		putchar('0' + x);
 		putchar(',');
 		putchar(' ');
 		x++;
