@@ -8,11 +8,16 @@
 
 int main(void)
 {
-	char a[24] = "abcdfghijklmnoprstuvwxyz";
+	char a = 'a';
 
-	for (int i = 0 ; i < 24 ; i++)
+	while (a <= 'z')
 	{
-		putchaar(a[i]);
+		if (a == 'q' || a == 'e')
+		{
+		a++;
+		}
+		putchar(a);
+		a++;
 	}
 	putchar('\n');
 	return (0);
