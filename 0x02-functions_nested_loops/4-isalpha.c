@@ -1,0 +1,19 @@
+#include "main.h"
+/**
+ * _isalpha - return 1 or 0
+ *
+ * @c: The character in ASCII code
+ *
+ * Return: Always 0 (Success)
+ */
+int _isalpha(int c)
+{
+	if (c >= 97 && c <= 122 || c >= 65 && x <= 90)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
+}
