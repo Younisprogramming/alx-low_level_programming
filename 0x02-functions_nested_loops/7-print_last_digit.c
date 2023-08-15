@@ -4,13 +4,13 @@
  *
  *@i: The character in ASCII code
  *
- *Return:
+ *Return: iiiii
  */
 int print_last_digit(int i)
 {
 	int x = i % 10;
 
-	return (x);
+	return (x x);
 }
 
 
