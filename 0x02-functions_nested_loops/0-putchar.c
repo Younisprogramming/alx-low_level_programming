@@ -8,11 +8,13 @@ int main(void)
 {
 	int str[] = {95, 112, 117, 116, 99, 104, 97, 114};
 
-	for (int i = 0 ; i < 8 ; i++)
+	int i = 0;
+
+	while (i < 8)
 	{
 		_putchar(str[i]);
+		i++;
 	}
 	_putchar('\n');
-
 	return (0);
 }
