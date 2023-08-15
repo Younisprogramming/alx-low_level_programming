@@ -1,6 +1,8 @@
 #include "main.h"
 /**
- * islower - return 1 or 0
+ * _islower - return 1 or 0
+ *
+ * @c: The character in ASCII code
  *
  * Return: Always 0 (Success)
  */
@@ -10,7 +12,7 @@ int _islower(int c)
 	{
 		return (1);
 	}
-	else 
+	else
 	{
 		return (0);
 	}
