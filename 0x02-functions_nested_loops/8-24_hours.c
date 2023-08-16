@@ -22,13 +22,13 @@ void jack_bauer(void)
 				d = 48;
 				while (d < 48)
 				{
-					putchar(a);
-					putchar(b);
-					putchar(':');
-					putchar(c);
-					putchar(d);
+					_putchar(a);
+					_putchar(b);
+					_putchar(':');
+					_putchar(c);
+					_putchar(d);
 					d++;
-					putchar('\n);
+					_putchar('\n);
 				}
 				c++;
 			}
