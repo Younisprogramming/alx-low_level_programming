@@ -36,7 +36,7 @@ void jack_bauer(void)
 			{
 				break;
 			}
-			b++:
+			b++;
 		}
 		a++;
 	}
