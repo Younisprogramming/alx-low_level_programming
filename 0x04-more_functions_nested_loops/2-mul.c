@@ -3,7 +3,7 @@
  * mul - wdadaw
  *
  * @a: wadwadwd
- * @b: dwawd 
+ * @b: dwawd
  *
  * Return: multipl...
  */
