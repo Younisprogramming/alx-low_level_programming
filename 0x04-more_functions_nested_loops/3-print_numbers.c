@@ -1,4 +1,3 @@
-#include <stdio>
 #include "main.h"
 /**
  * print_numbers - awdwa
