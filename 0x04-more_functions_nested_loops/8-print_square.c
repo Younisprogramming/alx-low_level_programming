@@ -11,19 +11,19 @@ void print_square(int size)
 	int i;
 	int s;
 
-	if (n <= 0)
+	if (size <= 0)
 	{
-		putchar('\n');
+		_putchar('\n');
 	}
 	else
 	{
-		for (i = 0 ; i < n ; i++)
+		for (i = 0 ; i < size ; i++)
 		{
-			for (s = 0 ; s < n ; s++)
+			for (s = 0 ; s < size ; s++)
 			{
-				putchar(35);
+				_putchar(35);
 			}
-			putchar('\n');
+			_putchar('\n');
 		}
 	}
 
