@@ -19,7 +19,6 @@ void rev_string(char *s)
 		tmp = s[end];
 		s[end] = s[start];
 		s[start] = tmp;
-		putchar(s[i]);
 		start++;
 		end--;
 	}
