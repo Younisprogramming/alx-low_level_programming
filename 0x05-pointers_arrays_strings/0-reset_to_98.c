@@ -6,9 +6,9 @@
  *
  *Return: 0
  */
-void reset_to_98(int *n)
+void reset_to_98(int n)
 {
-	int n = *n;
+	int *p = n;
 	int p = &n;
 	int *p = 98;
 }
