@@ -1,7 +1,7 @@
 #include <string.h>
 #include "main.h"
 /**
- *  *swap_int - awdwdw
+ *  *_strlen- awdwdw
  *   *
  *    *@s: 1
  *      *
