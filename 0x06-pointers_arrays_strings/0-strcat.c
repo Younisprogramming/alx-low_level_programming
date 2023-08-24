@@ -11,19 +11,21 @@
 char *_strcat(char *dest, char *src)
 {
 	char pt[strlen(dest)];
-	int i;
+	int i = 0;
 	int s;
 
-	for (i = 0 ; i < strlen(dest) ; i++)
+	while (i < strlen(dest))
 	{
 		pt[i] = dest[i];
+		i++;
 	}
 
 	s = strlen(dest);
 
-	for (i = 0 ; i < strlen(src) ; i++)
+	while (i < strlen(src))
 	{
 		pt[s] = src[i];
+		i++;
 		s++;
 	}
 	return (pt);
