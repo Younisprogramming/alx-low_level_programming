@@ -3,7 +3,7 @@
 /**
  *  *string_toupper - letter
  *   *
- *    *@t:awdwad
+ *    *@s:awdwad
  *      *
  *       * Return: char
  */
