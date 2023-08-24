@@ -16,14 +16,14 @@ char *_strcat(char *dest, char *src)
 
 	for (i = 0 ; i < strlen(dest) ; i++)
 	{
-		ptr[i] = s1[i];
+		pt[i] = dest[i];
 	}
 
-	s = strlen(s1);
+	s = strlen(dest);
 
 	for (i = 0 ; i < strlen(src) ; i++)
 	{
-		ptr[s] = s2[i];
+		pt[s] = src[i];
 		s++;
 	}
 	return (pt);
