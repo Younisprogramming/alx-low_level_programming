@@ -10,23 +10,20 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	char pt[strlen(dest)];
-	int i = 0;
-	int s;
+	int count = 0, count2 = 0;
 
-	while (i < strlen(dest))
+	while (*(dest + count) != '\0')
 	{
-		pt[i] = dest[i];
-		i++;
+		count++;
 	}
 
-	s = strlen(dest);
-
-	while (i < strlen(src))
+	while (count2 >= 0)
 	{
-		pt[s] = src[i];
-		i++;
-		s++;
+		*(dest + count) = *(src + count2);
+		if (*(src + count2) == '\0')
+			break;
+		count++;
+		count2++;
 	}
-	return (pt);
+	return (dest);
 }
