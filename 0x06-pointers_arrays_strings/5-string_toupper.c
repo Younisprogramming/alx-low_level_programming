@@ -7,7 +7,7 @@
  *      *
  *       * Return: char
  */
-char *string_toupper(char *t)
+char *string_toupper(char *s)
 {
 	int count = 0;
 
