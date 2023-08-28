@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <string.h>
 #include "main.h"
 /**
  *  *_strchr - fills memory with a constant byte
@@ -10,7 +10,7 @@
  */
 char *_strchr(char *s, char c)
 {
-	int i;
+	unsigned int i;
 	char *p = 0;
 
 	for (i = 0 ; i < strlen(s) ; i++)
