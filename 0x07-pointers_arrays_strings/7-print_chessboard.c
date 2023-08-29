@@ -5,15 +5,13 @@
  */
 void print_chessboard(char (*a)[8])
 {
-	unsigned int i, t;
+	int indx1, indx2;
 
-	for (i = 0 ; a[i][7] ; i++)
+	for (indx1 = 0; a[indx1][7]; indx1++)
 	{
-		for (t = 0 ; t < 8 ; t++)
-		{
-			_putchar(a[i][t]);
-		}
-		if (i < 8 - 1)
-			_putchar('\n');
+		for (indx2 = 0; indx2 < 8; indx2++)
+			_putchar(a[indx1][indx2]);
+
+		_putchar('\n');
 	}
 }
