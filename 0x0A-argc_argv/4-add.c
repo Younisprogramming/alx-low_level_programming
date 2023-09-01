@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 {
 	int count = 0;
 	int i;
-	long unsigned int j;
+	unsigned long int j;
 
 	for (i = 1 ; i < argc ; i++)
 	{
