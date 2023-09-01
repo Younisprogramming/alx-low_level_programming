@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	{
 		printf("Error\n");
 		return (1);
-	} 
+	}
 	s = atoi(argv[1]);
 
 	if (s < 0)
@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 	for (i = 0 ; i < 5 ; i++)
 	{
 		count += s / array[i];
-		s = s % array[i];	
+		s = s % array[i];
 	}
 	printf("%d\n", count);
 	return (0);
