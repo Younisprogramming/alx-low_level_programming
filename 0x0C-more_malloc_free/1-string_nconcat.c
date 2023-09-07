@@ -18,10 +18,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (n >= strlen(s2))
 		n = strlen(s2);
-	if (s1 != NULL)
-		p = malloc(strlen(s1) + n + 1);
-	else
+	if (s1 == NULL)
 		p = malloc(n + 1);
+	else
+		p = malloc(strlen(s1) + n + 1);
 	if (p == NULL)
 		return (NULL);
 	if (s1 == NULL)
