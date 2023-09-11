@@ -1,5 +1,5 @@
-#ifndef _OBJECT_LIKE_MICRO_
-#define _OBJECT_LIKE_MICRO_
+#ifndef __OBJECT_LIKE_MICRO__
+#define __OBJECT_LIKE_MICRO__
 
 #define SIZE 1024
 
