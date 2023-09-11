@@ -1,5 +1,5 @@
-#ifndef "0-OBJECT_LIKE_MACRO.H"
-#define "0-OBJECT_LIKE_MACRO.H"
+#ifndef "HELLO"
+#define "HELLO"
 
 #define SIZE 1024
 
