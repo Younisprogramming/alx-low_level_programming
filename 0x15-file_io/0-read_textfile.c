@@ -8,15 +8,16 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	FILE *fp;
+	int n;
 	char c;
 	unsigned int i = 0;
 
 	if (!filename)
 		return (0);
-	fp = fopen(filename, "r");
+	n = (fp = fopen(filename, "r"));
 	if (fp == -1)
 		return (0);
-	while (i < letters)
+	while (i <= letters)
 	{
 		c = fgetc(fp);
 		if (feof(fp))
