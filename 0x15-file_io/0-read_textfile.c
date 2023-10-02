@@ -11,10 +11,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	char c;
 	unsigned int i = 0;
 
-	if (filename == NULL)
+	if (!filename)
 		return (0);
 	fp = fopen(filename, "r");
-	if (fp == NULL)
+	if (fp == -1)
 		return (0);
 	while (i < letters)
 	{
