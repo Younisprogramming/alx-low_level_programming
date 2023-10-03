@@ -188,7 +188,7 @@ void check_sys(char *ptr)
 int check_elf(char *ptr)
 {
 	int addr = (int)ptr[0];
-	char E = ptr[0];
+	char E = ptr[1];
 	char L = ptr[2];
 	char F = ptr[3];
 
