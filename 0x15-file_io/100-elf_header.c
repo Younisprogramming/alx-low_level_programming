@@ -7,9 +7,9 @@
 #include <elf.h>
 
 /**
- * print_addr - print
+ * print_addr - prints address
  * @ptr: magic.
- * Return: no retur
+ * Return: no return.
  */
 void print_addr(char *ptr)
 {
@@ -34,6 +34,7 @@ void print_addr(char *ptr)
 		if (ptr[7] == 6)
 			printf("00");
 	}
+
 	if (sys == '2')
 	{
 		begin = 26;
@@ -103,7 +104,7 @@ void print_osabi(char *ptr)
 
 
 /**
- * print_version - prints
+ * print_version - prints version
  * @ptr: magic.
  * Return: no return.
  */
@@ -119,7 +120,7 @@ void print_version(char *ptr)
 	printf("\n");
 }
 /**
- * print_data - print
+ * print_data - prints data
  * @ptr: magic.
  * Return: no return.
  */
