@@ -7,14 +7,14 @@
 #include <elf.h>
 
 /**
- * print_addr - prints address
+ * print_addr - print
  * @ptr: magic.
- * Return: no return.
+ * Return: no retur
  */
 void print_addr(char *ptr)
 {
 	int i;
-	int start;
+	int begin;
 	char sys;
 
 	printf("  Entry point address:               0x");
@@ -22,9 +22,9 @@ void print_addr(char *ptr)
 	sys = ptr[4] + '0';
 	if (sys == '1')
 	{
-		start = 26;
+		begin = 26;
 		printf("80");
-		for (i = start; i >= 22; i--)
+		for (i = begin; i >= 22; i--)
 		{
 			if (ptr[i] > 0)
 				printf("%x", ptr[i]);
@@ -34,11 +34,10 @@ void print_addr(char *ptr)
 		if (ptr[7] == 6)
 			printf("00");
 	}
-
 	if (sys == '2')
 	{
-		start = 26;
-		for (i = start; i > 23; i--)
+		begin = 26;
+		for (i = begin; i > 23; i--)
 		{
 			if (ptr[i] >= 0)
 				printf("%02x", ptr[i]);
@@ -52,7 +51,7 @@ void print_addr(char *ptr)
 }
 
 /**
- * print_type - prints
+ * print_type - prints type
  * @ptr: magic.
  * Return: no return.
  */
@@ -81,7 +80,7 @@ void print_type(char *ptr)
 }
 
 /**
- * print_osabi - prints
+ * print_osabi - prints osabi
  * @ptr: magic.
  * Return: no return.
  */
@@ -102,6 +101,7 @@ void print_osabi(char *ptr)
 	printf("  ABI Version:                       %d\n", ptr[8]);
 }
 
+
 /**
  * print_version - prints
  * @ptr: magic.
@@ -119,7 +119,7 @@ void print_version(char *ptr)
 	printf("\n");
 }
 /**
- * print_data - prints
+ * print_data - print
  * @ptr: magic.
  * Return: no return.
  */
@@ -135,7 +135,7 @@ void print_data(char *ptr)
 		printf(", big endian\n");
 }
 /**
- * print_magic - prints magic.
+ * print_magic - prints magic info.
  * @ptr: magic.
  * Return: no return.
  */
