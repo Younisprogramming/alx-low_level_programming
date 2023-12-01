@@ -1,31 +1,14 @@
 #include "hash_tables.h"
+
 /**
- * create_item - allocate memory
- * @key: the key
- * @value: value
- * Return: the pointer to the item
- */
-hash_node_t *create_item(char *key,  char *value)
-{
-	hash_node_t *item = (hash_node_t *) malloc(sizeof(hash_table_t));
-
-	item->key = (char *) malloc(strlen(key) + 1);
-	item->value = (char *) malloc(strlen(value) + 1);
-
-	strcpy(item->key, (char *)key);
-	strcpy(item->value, (char *)value);
-
-	return (item);
-}
-/**
- * handle_collision - adds a node at the beginning of a hash at a given index
+ * add_n_hash - adds a node at the beginning of a hash at a given index
  *
  * @head: head of the hash linked list
- * @k: key of the hash
- * @v: value to store
+ * @key: key of the hash
+ * @value: value to store
  * Return: head of the hash
  */
-hash_node_t *handle_collision(hash_node_t **head, char *k, const char *v)
+hash_node_t *add_n_hash(hash_node_t **head, const char *key, const char *value)
 {
 	hash_node_t *tmp;
 
@@ -33,10 +16,10 @@ hash_node_t *handle_collision(hash_node_t **head, char *k, const char *v)
 
 	while (tmp != NULL)
 	{
-		if (strcmp(k, tmp->key) == 0)
+		if (strcmp(key, tmp->key) == 0)
 		{
 			free(tmp->value);
-			tmp->value = strdup(v);
+			tmp->value = strdup(value);
 			return (*head);
 		}
 		tmp = tmp->next;
@@ -47,13 +30,14 @@ hash_node_t *handle_collision(hash_node_t **head, char *k, const char *v)
 	if (tmp == NULL)
 		return (NULL);
 
-	tmp->key = strdup(k);
-	tmp->value = strdup(v);
+	tmp->key = strdup(key);
+	tmp->value = strdup(value);
 	tmp->next = *head;
 	*head = tmp;
 
 	return (*head);
 }
+
 /**
  * hash_table_set - adds a hash (key, value) to a given hash table
  *
@@ -64,31 +48,18 @@ hash_node_t *handle_collision(hash_node_t **head, char *k, const char *v)
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *item = create_item((char *)key, (char *)value);
+	unsigned long int k_index;
 
-	unsigned long int index = key_index((const unsigned char *)key, ht->size);
+	if (ht == NULL)
+		return (0);
 
-	hash_node_t *current_item = ht->array[index];
+	if (key == NULL || *key == '\0')
+		return (0);
 
-	if (current_item == NULL)
-	{
-		ht->array[index] = item;
-		return (1);
-	}
-	else
-	{
-		if (strcmp(current_item->key, (char *)key) == 0)
-		{
-			strcpy(ht->array[index]->value, value);
-			return (1);
-		}
-		else
-		{
-			if (handle_collision(&(ht->array[index]), (char *)key, value) == NULL)
-				return (0);
-			else
-				return (1);
-		}
-	}
-	return (0);
+	k_index = key_index((unsigned char *)key, ht->size);
+
+	if (add_n_hash(&(ht->array[k_index]), key, value) == NULL)
+		return (0);
+
+	return (1);
 }
